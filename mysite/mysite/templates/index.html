@@ -18,17 +18,20 @@
 
 <header class="masthead">
     <div class="overlay"></div>
+
     <div class="container">
         <div class="row">
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Datavoid Blog </h3>
-                    <p class="text-light">Its all about data and software. &nbsp
+                    <h1 class="display-4">AAAA</h1>
+                    <p class="lead">It's all about data. And so am I.
                     </p>
                 </div>
             </div>
         </div>
     </div>
+
+
 </header>
 
 <div class="container">
@@ -40,7 +43,9 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
+
+                    <p class="card-text ">{{ post.content | safe }}</p>
+
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
             </div>
